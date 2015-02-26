@@ -1,0 +1,2 @@
+<h2><%=t('Crear Producto')%></h2> 
+  <%= render 'form' %>

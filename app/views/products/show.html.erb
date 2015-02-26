@@ -1,0 +1,45 @@
+ <h2><%=t('Show Products')%></h2>
+<%= link_to(t('Back to List'), {:action => 'index', :layout=>@layout}, :class => 'back-link') %>
+  <table summary="Products detail view">
+    <tr>
+      <th><%=t('id')%></th>
+      <td><%= @product.id %></td>
+    </tr>
+    <tr>
+      <th><%=t('Descripcion')%></th>
+      <td><%= @product.descripcion %></td>
+    </tr>
+    <tr>
+      <th><%=t('Categoria')%></th>
+      <td><%= @product.categoria %></td>
+    </tr>
+    <tr>
+      <th><%=t('Subcategoria')%></th>
+      <td><%= @product.subcategoria %></td>
+    </tr>
+    <tr>
+      <th><%=t('Modelo')%></th>
+      <td><%= @product.modelo%></td>
+    </tr>
+    <tr>
+      <th><%=t('Presentacion')%></th>
+      <td><%= t(@product.presentacion) %></td>
+    </tr>
+    <tr>
+      <th><%=t('Fabricante')%></th>
+      <td><%= t(@product.fabricante) %></td>
+    </tr>
+         <tr>
+      <th><%=t('Url_Fabricante')%></th>
+      <td><%= t(@product.url_fabricante) %></td>
+    </tr>
+         <tr>
+      <th><%=t('Url_Driver')%></th>
+      <td><%= t(@product.url_driver) %></td>
+    </tr>
+         <tr>
+      <th><%=t('Url_Ficha_Tecnica')%></th>
+      <td><%= t(@product.url_ficha_tecnica) %></td>
+    </tr>
+     
+  </table>

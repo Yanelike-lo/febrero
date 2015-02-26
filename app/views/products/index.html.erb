@@ -1,0 +1,52 @@
+ 
+<h2><%=('Products')%></h2>  
+<table class="opciones">
+  <tr>
+    <td> Nombre </td>
+    <td> <%= link_to'Add', products_new_path%> </td>
+    <td> Categoría </td> 
+  </tr> 
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td> 
+  </tr> 
+  </table> 
+
+<div class="search">
+    <fieldset>
+      <legend>Buscar</legend>
+        <%= form_for(products_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Encontrar" %> 
+        <%= submit_tag "Search" %> 
+        <input type="button" name="clear" value="Clear" onclick="clearForm(this.form);" >
+        <% end %>  
+    </fieldset>
+</div>
+
+  <div class="index">
+  <%= pluralize(@productsall.size, 'productos') %>
+  <table class="products" summary="Product list">
+  <tr>
+    <td> Nombre </td>
+    <td> Fabricante </td>
+    <td> Categoría </td>
+    <td> Subcategoría </td>
+    <td> Modelo </td>
+  </tr>
+   <% @productsall.each do |product| %>
+    <tr id="<%=product.id%>" >
+      <td><%= product.descripcion%></td>
+      <td><%= product.fabricante %> </td>
+      <td><%= product.categoria %></td>
+      <td><%= product.subcategoria %></td>
+      <td><%= product.modelo %></td> 
+      <td class="list_actions">
+        <%= link_to("Editar", edit_product_path(product) ) %>
+        <%= link_to(  "Ver",  product) %>  
+      </td>
+    </tr>
+    <% end %>
+  </table>  
+</div>
+

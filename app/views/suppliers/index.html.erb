@@ -1,0 +1,50 @@
+<h2><%=('Proveedores')%></h2>  
+<table class="opciones">
+  <tr>
+    <td> Nombre </td>
+    <td> <%= link_to'Add', suppliers_new_path%> </td>
+    <td> Categoría </td> 
+  </tr> 
+  <tr>
+    <td> </td>
+    <td> </td>
+    <td> </td> 
+  </tr> 
+  </table> 
+
+<div class="search">
+    <fieldset>
+      <legend>Buscar</legend>
+        <%= form_for(suppliers_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Encontrar" %> 
+        <%= submit_tag "Search" %> 
+        <input type="button" name="clear" value="Clear" onclick="clearForm(this.form);" >
+        <% end %>  
+    </fieldset>
+</div>
+
+  <div class="index">
+  <%= pluralize(@suppliersall.size, 'Proveedores') %>
+  <table class="products" summary="Product list">
+  <tr>
+    <td> Nombre </td>
+    <td> RFC </td>
+    <td> Usuarios </td>
+    <td> Teléfono </td>
+    <td> Email </td>
+  </tr>
+   <% @suppliersall.each do |supplier| %>
+    <tr id="<%=supplier.id%>" >
+      <td><%= supplier.razon_social%></td>
+      <td><%= supplier.rfc %> </td>
+      <td><%=  %></td>
+      <td><%= supplier.telefono %></td>
+      <td><%= supplier.email %></td> 
+      <td class="list_actions">
+        <%= link_to("Editar"  ) %>
+        <%= link_to(  "Ver" ) %>  
+      </td>
+    </tr>
+    <% end %>
+  </table>  
+</div>

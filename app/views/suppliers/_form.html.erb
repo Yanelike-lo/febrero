@@ -1,0 +1,68 @@
+<%= form_for @supplier  do |f| %>
+<table>
+  <tr>
+    <th><%= f.label(:razon_social) %></th>
+    <td><%= f.text_field(:razon_social) %><h9>*</h9></td>
+  </tr> 
+ <tr>
+    <th><%= f.label(:tipo) %></th>
+    <td><%= f.text_field(:tipo) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:rfc) %></th>
+    <td><%= f.text_field(:rfc) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:cp) %></th>
+    <td><%= f.text_field(:cp) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:calle) %></th>
+    <td><%= f.text_field(:calle) %><h9>*</h9></td>
+  </tr>
+   <tr>
+  <th><%= f.label(:colonia) %></th>
+    <td><%= f.text_field(:colonia) %><h9>*</h9></td>
+  </tr>
+    <tr>
+  <th><%= f.label(:no_exterior) %></th>
+    <td><%= f.text_field(:no_exterior) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:no_interior) %></th>
+    <td><%= f.text_field(:no_interior) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:estado) %></th>
+    <td><%= f.text_field(:estado) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:pais) %></th>
+    <td><%= f.text_field(:pais) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:sitio_web) %></th>
+    <td><%= f.text_field(:sitio_web) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:telefono) %></th>
+    <td><%= f.text_field(:telefono) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:movil) %></th>
+    <td><%= f.text_field(:movil) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:email) %></th>
+    <td><%= f.text_field(:email) %><h9>*</h9></td>
+  </tr>
+</table> 
+
+  <%= f.fields_for :account_suppliers do |account_number_form| %>
+  <%= render "account_supplier_fields", :account_suppliers_form=>account_number_form %>
+  <%end%>
+ <%= link_to "Add Account", controller: "suppliers", action: "new"  %> </td>
+ 
+<%= f.submit %>
+<% end %> 
+

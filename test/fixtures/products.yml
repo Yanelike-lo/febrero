@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descripcion: MyString
+  categoria: MyString
+  subcategoria: MyString
+  modelo: MyString
+  serie: MyString
+  fabricante: MyString
+  url_fabricante: MyString
+  url_driver: MyString
+  url_ficha_tecnica: MyString
+
+two:
+  descripcion: MyString
+  categoria: MyString
+  subcategoria: MyString
+  modelo: MyString
+  serie: MyString
+  fabricante: MyString
+  url_fabricante: MyString
+  url_driver: MyString
+  url_ficha_tecnica: MyString

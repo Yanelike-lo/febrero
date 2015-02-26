@@ -1,0 +1,42 @@
+
+<%= form_for @product  do |f| %>
+<table>
+  <tr>
+    <th><%= f.label(:descripcion) %></th>
+    <td><%= f.text_field(:descripcion) %><h9>*</h9></td>
+  </tr> 
+ <tr>
+    <th><%= f.label(:categoria) %></th>
+    <td><%= f.text_field(:categoria) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:subcategoria) %></th>
+    <td><%= f.text_field(:subcategoria) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:modelo) %></th>
+    <td><%= f.text_field(:modelo) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:presentacion) %></th>
+    <td><%= f.text_field(:presentacion) %><h9>*</h9></td>
+  </tr>
+   <tr>
+  <th><%= f.label(:fabricante) %></th>
+    <td><%= f.text_field(:fabricante) %><h9>*</h9></td>
+  </tr>
+    <tr>
+  <th><%= f.label(:url_fabricante) %></th>
+    <td><%= f.text_field(:url_fabricante) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:url_driver) %></th>
+    <td><%= f.text_field(:url_driver) %><h9>*</h9></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:url_ficha_tecnica) %></th>
+    <td><%= f.text_field(:url_ficha_tecnica) %><h9>*</h9></td>
+  </tr>
+</table> 
+<%= f.submit %>
+<% end %>

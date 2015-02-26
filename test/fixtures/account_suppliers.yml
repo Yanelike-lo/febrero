@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_cuenta: MyString
+  titular: MyString
+  fecha_expira: MyString
+  codigo: 1
+  supplier_id: 
+  bank_id: 
+
+two:
+  no_cuenta: MyString
+  titular: MyString
+  fecha_expira: MyString
+  codigo: 1
+  supplier_id: 
+  bank_id: 
